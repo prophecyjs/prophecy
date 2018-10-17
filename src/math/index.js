@@ -1,6 +1,6 @@
-const Matrix = require('./matrix')
-const Vector2d = require('./vector2d')
-const Vector3d = require('./vector3d')
+const Matrix = require('./Matrix')
+const Vector2d = require('./Vector2d')
+const Vector3d = require('./Vector3d')
 
 /**
  * @namespace Prophecy.Math

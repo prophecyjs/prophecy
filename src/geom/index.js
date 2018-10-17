@@ -1,5 +1,5 @@
-const Point = require('./point')
-const Rect = require('./rect')
+const Point = require('./Point')
+const Rect = require('./Rect')
 
 
 /**
