@@ -41,5 +41,13 @@
     "webpack-cli": "^3.1.1",
     "webpack-shell-plugin": "^0.5.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "jest": {
+    "testURL": "http://localhost",
+    "verbose": true,
+    "testMatch": [
+      "<rootDir>/tests/**/*.js?(x)",
+      "**/?(*.)(spec|test).js?(x)"
+    ]
+  }
 }
