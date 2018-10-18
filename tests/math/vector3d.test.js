@@ -1,6 +1,14 @@
 const Prophecy = require('../../build/prophecy.js')
 
 describe('Math - Vector3d', function () {
+  it('Should have default values of x=0 and y=0 z=0 if initialized without any parameters', () => {
+    let v = new Prophecy.Math.Vector3d()
+    expect(v).toEqual({
+      x: 0,
+      y: 0,
+      z: 0
+    })
+  })
 
   it('Constructing should create a vector3d the correct values.', () => {
     let v = new Prophecy.Math.Vector3d(2, 5, 2)
@@ -17,44 +25,38 @@ describe('Math - Vector3d', function () {
     expect(theclone).toEqual({
       x: 2,
       y: 2,
-      z: 4,
+      z: 4
     })
   })
 
   it('add() should add a value to every value in the Vector3d.', () => {
     let v = new Prophecy.Math.Vector3d(2, 5, 2)
     v.add(2)
-    expect(v).toEqual(
-      {
-        x: 4,
-        y: 7,
-        z: 4
-      }
-    )
+    expect(v).toEqual({
+      x: 4,
+      y: 7,
+      z: 4
+    })
   })
 
   it('multiply () should multiply a value to every value in the Vector3d.', () => {
     let v = new Prophecy.Math.Vector3d(4, 4, 4)
     v.multiply(2)
-    expect(v).toEqual(
-      {
-        x: 8,
-        y: 8,
-        z: 8
-      }
-    )
+    expect(v).toEqual({
+      x: 8,
+      y: 8,
+      z: 8
+    })
   })
 
   it('devide () should devide the value of the Vector3d.', () => {
     let v = new Prophecy.Math.Vector3d(4, 4, 2)
     v.devide(2)
-    expect(v).toEqual(
-      {
-        x: 2,
-        y: 2,
-        z: 1,
-      }
-    )
+    expect(v).toEqual({
+      x: 2,
+      y: 2,
+      z: 1
+    })
   })
 
   it('mangitude() should calculate the correct magnitude from', () => {
@@ -83,13 +85,11 @@ describe('Math - Vector3d', function () {
   it('subtract() should add a value to every value in the Vector3d.', () => {
     let v = new Prophecy.Math.Vector3d(4, 4, 9)
     v.subtract(2)
-    expect(v).toEqual(
-      {
-        x: 2,
-        y: 2,
-        z: 7
-      }
-    )
+    expect(v).toEqual({
+      x: 2,
+      y: 2,
+      z: 7
+    })
   })
 
   it('getX() should return the x value of the Vector3d.', () => {
@@ -138,31 +138,25 @@ describe('Math - Vector3d', function () {
     let v = new Prophecy.Math.Vector3d(2, 5, 2)
     let result = v.add(2)
     let object = result.toObject()
-    expect(object).toEqual(
-      {
-        x: 4,
-        y: 7,
-        z: 4,
-      }
-    )
+    expect(object).toEqual({
+      x: 4,
+      y: 7,
+      z: 4
+    })
   })
 
   it('normalize () should return the normalized value of the vector', () => {
     let v = new Prophecy.Math.Vector3d(3, 1, 2)
     let expected = v.normalize()
-    expect(expected).toEqual(
-      {
-        x: 0.8017837257372732,
-        y: 0.2672612419124244,
-        z: 0.5345224838248488,
-      }
-    )
+    expect(expected).toEqual({
+      x: 0.8017837257372732,
+      y: 0.2672612419124244,
+      z: 0.5345224838248488
+    })
   })
 })
 
-
 describe('Math - Vector3d Element-wise', function () {
-
   it('add() should take an other vector as argument and add that Vector3d to the existing Vector3d.', () => {
     let v1 = new Prophecy.Math.Vector3d(2, 4, 7)
     let v2 = new Prophecy.Math.Vector3d(2, 2, 9)
@@ -170,18 +164,18 @@ describe('Math - Vector3d Element-wise', function () {
     expect(v1).toEqual({
       x: 4,
       y: 6,
-      z: 16,
+      z: 16
     })
   })
 
   it('subtract() should take an other vector as argument and subtract that Vector3d from the existing Vector3d.', () => {
-    let v1 = new Prophecy.Math.Vector3d(2, 4 ,2)
+    let v1 = new Prophecy.Math.Vector3d(2, 4, 2)
     let v2 = new Prophecy.Math.Vector3d(2, 2, 9)
     v1 = v1.subtract(v2)
     expect(v1).toEqual({
       x: 0,
       y: 2,
-      z: -7,
+      z: -7
     })
   })
 
@@ -192,7 +186,7 @@ describe('Math - Vector3d Element-wise', function () {
     expect(v1).toEqual({
       x: 4,
       y: 12,
-      z: 132,
+      z: 132
     })
   })
 
@@ -203,7 +197,7 @@ describe('Math - Vector3d Element-wise', function () {
     expect(v1).toEqual({
       x: 4,
       y: 4,
-      z: 4,
+      z: 4
     })
   })
 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -10,18 +11,20 @@
         }
     </style>
 </head>
+
 <body>
-<div id="game"></div>
-<div id="fps"></div>
-<script>
+    <div id="game"></div>
+    <div id="fps"></div>
+    <script>
+        let game = new Prophecy.Game({
+            backgroundColor: 0x0,
+            width: 800,
+            height: 600,
+        });
 
-    let game = new Prophecy.Game({
-        backgroundColor: 0x0,
-        width: 800,
-        height: 600,
-    });
 
-    console.log('hi')
-</script>
+        console.log('hi')
+    </script>
 </body>
+
 </html>

@@ -1,12 +1,19 @@
 const Prophecy = require('../../build/prophecy.js')
 
 describe('Math - Vector2d', function () {
+  it('Should have default values of x=0 and y=0 if initialized without any parameters', () => {
+    let v = new Prophecy.Math.Vector2d()
+    expect(v).toEqual({
+      x: 0,
+      y: 0
+    })
+  })
 
   it('Constructing should create a Vector2d the correct values.', () => {
     let v = new Prophecy.Math.Vector2d(2, 2)
     expect(v).toEqual({
       x: 2,
-      y: 2,
+      y: 2
     })
   })
 
@@ -15,19 +22,17 @@ describe('Math - Vector2d', function () {
     let theclone = v.clone()
     expect(theclone).toEqual({
       x: 2,
-      y: 2,
+      y: 2
     })
   })
 
   it('add() should add a value to every value in the Vector2d.', () => {
     let v = new Prophecy.Math.Vector2d(4, 6)
     v.add(2)
-    expect(v).toEqual(
-      {
-        x: 6,
-        y: 8,
-      }
-    )
+    expect(v).toEqual({
+      x: 6,
+      y: 8
+    })
   })
 
   it('clone() should return a new cloned version of an existing Vector2d. And add() would not change the original', () => {
@@ -48,34 +53,28 @@ describe('Math - Vector2d', function () {
   it('subtract() should add a value to every value in the Vector2d.', () => {
     let v = new Prophecy.Math.Vector2d(4, 4)
     v.subtract(2)
-    expect(v).toEqual(
-      {
-        x: 2,
-        y: 2
-      }
-    )
+    expect(v).toEqual({
+      x: 2,
+      y: 2
+    })
   })
 
   it('multiply () should multiply a value to every value in the Vector2d.', () => {
     let v = new Prophecy.Math.Vector2d(4, 4)
     v.multiply(2)
-    expect(v).toEqual(
-      {
-        x: 8,
-        y: 8
-      }
-    )
+    expect(v).toEqual({
+      x: 8,
+      y: 8
+    })
   })
 
   it('devide () should devide the value of the Vector2d.', () => {
     let v = new Prophecy.Math.Vector2d(4, 4)
     v.devide(2)
-    expect(v).toEqual(
-      {
-        x: 2,
-        y: 2
-      }
-    )
+    expect(v).toEqual({
+      x: 2,
+      y: 2
+    })
   })
 
   it('mangitude() should calculate the correct magnitude from', () => {
@@ -123,23 +122,19 @@ describe('Math - Vector2d', function () {
   it('toObject() returns the values as an object', () => {
     let v = new Prophecy.Math.Vector2d(2, 2, 4)
     let object = v.toObject()
-    expect(object).toEqual(
-      {
-        x: 2,
-        y: 2
-      }
-    )
+    expect(object).toEqual({
+      x: 2,
+      y: 2
+    })
   })
 
   it('normalize () should return the normalized value of the vector', () => {
     let v = new Prophecy.Math.Vector2d(3, 1)
     let expected = v.normalize()
-    expect(expected).toEqual(
-      {
-        x: 0.9486832980505138,
-        y: 0.31622776601683794,
-      }
-    )
+    expect(expected).toEqual({
+      x: 0.9486832980505138,
+      y: 0.31622776601683794
+    })
   })
 
   it('radians () return the correct radians for a vector.', () => {
@@ -153,18 +148,16 @@ describe('Math - Vector2d', function () {
     let r = v.degrees()
     expect(r).toEqual(26.56505117707799)
   })
-
 })
- 
-describe('Math - Vector2d Element-wise', function () {
 
+describe('Math - Vector2d Element-wise', function () {
   it('add() should take an other matrix as argument and add that Matrix to the existing Matrix.', () => {
     let v1 = new Prophecy.Math.Vector2d(2, 4)
     let v2 = new Prophecy.Math.Vector2d(2, 2)
     v1 = v1.add(v2)
     expect(v1).toEqual({
       x: 4,
-      y: 6,
+      y: 6
     })
   })
 
@@ -174,7 +167,7 @@ describe('Math - Vector2d Element-wise', function () {
     v1 = v1.subtract(v2)
     expect(v1).toEqual({
       x: 0,
-      y: 2,
+      y: 2
     })
   })
 
@@ -184,7 +177,7 @@ describe('Math - Vector2d Element-wise', function () {
     v1 = v1.multiply(v2)
     expect(v1).toEqual({
       x: 4,
-      y: 12,
+      y: 12
     })
   })
 
@@ -194,7 +187,7 @@ describe('Math - Vector2d Element-wise', function () {
     v1 = v1.devide(v2)
     expect(v1).toEqual({
       x: 2,
-      y: 2,
+      y: 2
     })
   })
 

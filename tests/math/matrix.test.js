@@ -1,6 +1,15 @@
 const Prophecy = require('../../build/prophecy.js')
 
 describe('Math - Matrix', function () {
+  it('Constructing an empty without constructor arguments', () => {
+    let m = new Prophecy.Math.Matrix()
+    expect(m).toEqual({
+      rows: 0,
+      cols: 0,
+      fill: 0,
+      data: []
+    })
+  })
 
   it('Constructing should create a matrix the correct size and fill.', () => {
     let m = new Prophecy.Math.Matrix(2, 2, 1)
@@ -10,7 +19,7 @@ describe('Math - Matrix', function () {
       fill: 1,
       data: [
         [1, 1],
-        [1, 1],
+        [1, 1]
       ]
     })
   })
@@ -24,7 +33,7 @@ describe('Math - Matrix', function () {
       fill: 2,
       data: [
         [2, 2],
-        [2, 2],
+        [2, 2]
       ]
     })
   })
@@ -37,7 +46,7 @@ describe('Math - Matrix', function () {
         [4, 4, 4, 4],
         [4, 4, 4, 4],
         [4, 4, 4, 4],
-        [4, 4, 4, 4],
+        [4, 4, 4, 4]
       ]
     )
   })
@@ -53,7 +62,7 @@ describe('Math - Matrix', function () {
       fill: 1,
       data: [
         [3, 3],
-        [3, 3],
+        [3, 3]
       ]
     })
     expect(theclone).toEqual({
@@ -62,7 +71,7 @@ describe('Math - Matrix', function () {
       fill: 1,
       data: [
         [2, 2],
-        [2, 2],
+        [2, 2]
       ]
     })
   })
@@ -97,7 +106,7 @@ describe('Math - Matrix', function () {
         [1, 1, 1, 1],
         [1, 1, 1, 1],
         [1, 1, 1, 1],
-        [1, 1, 1, 1],
+        [1, 1, 1, 1]
       ]
     )
   })
@@ -113,7 +122,7 @@ describe('Math - Matrix', function () {
       fill: 4,
       data: [
         [2, 2],
-        [2, 2],
+        [2, 2]
       ]
     })
     expect(theclone).toEqual({
@@ -122,7 +131,7 @@ describe('Math - Matrix', function () {
       fill: 4,
       data: [
         [3, 3],
-        [3, 3],
+        [3, 3]
       ]
     })
   })
@@ -135,7 +144,7 @@ describe('Math - Matrix', function () {
         [6, 6, 6, 6],
         [6, 6, 6, 6],
         [6, 6, 6, 6],
-        [6, 6, 6, 6],
+        [6, 6, 6, 6]
       ]
     )
   })
@@ -151,7 +160,7 @@ describe('Math - Matrix', function () {
       fill: 4,
       data: [
         [8, 8],
-        [8, 8],
+        [8, 8]
       ]
     })
     expect(theclone).toEqual({
@@ -160,7 +169,7 @@ describe('Math - Matrix', function () {
       fill: 4,
       data: [
         [16, 16],
-        [16, 16],
+        [16, 16]
       ]
     })
   })
@@ -196,11 +205,9 @@ describe('Math - Matrix', function () {
     let add = m.multiply(2)
     expect(add).toBeInstanceOf(Prophecy.Math.Matrix)
   })
-
 })
 
 describe('Math - Matrix Element-wise', function () {
-
   it('add() should throw an error if a matrix object is passed as parameter but dont\'t share the same sizes with the original matrix.', () => {
     let m1 = new Prophecy.Math.Matrix(2, 2, 4)
     let m2 = new Prophecy.Math.Matrix(2, 3, 2)
@@ -219,7 +226,7 @@ describe('Math - Matrix Element-wise', function () {
       fill: 4,
       data: [
         [6, 6],
-        [6, 6],
+        [6, 6]
       ]
     })
   })
@@ -242,7 +249,7 @@ describe('Math - Matrix Element-wise', function () {
       fill: 4,
       data: [
         [2, 2],
-        [2, 2],
+        [2, 2]
       ]
     })
   })
@@ -265,7 +272,7 @@ describe('Math - Matrix Element-wise', function () {
       fill: 4,
       data: [
         [8, 8],
-        [8, 8],
+        [8, 8]
       ]
     })
   })
