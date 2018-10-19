@@ -4,9 +4,9 @@
  */
 
 let Math = {
-  Matrix: require('./Matrix'),
-  Vector2d: require('./Vector2d'),
-  Vector3d: require('./Vector3d')
+  Matrix: require('./Matrix').default,
+  Vector2d: require('./Vector2d').default,
+  Vector3d: require('./Vector3d').default
 }
 
 module.exports = Math

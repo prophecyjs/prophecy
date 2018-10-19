@@ -310,4 +310,4 @@ class Vector3d {
   }
 }
 
-module.exports = Vector3d
+export default Vector3d

@@ -1,4 +1,3 @@
-
 class LocalStorage {
   /**
    * @classdesc
@@ -10,14 +9,14 @@ class LocalStorage {
    * @since 1.0.0
    */
   constructor () {
-    if (typeof(Storage) === 'undefined') {
+    if (typeof (Storage) === 'undefined') {
       throw new Error('LocalStorage: localStorage is not suppored by this browser.')
     }
   }
 
   /**
    * Get the stored value identified with the given key.
-   * 
+   *
    * @param {string} key - The key identifier to retrieve.
    * @returns {*}
    */
@@ -27,7 +26,7 @@ class LocalStorage {
 
   /**
    * Set a value stored by a given identifier.
-   * 
+   *
    * @param {*} key - The unique identifer
    * @param {*} value - The value to store
    */
@@ -36,8 +35,8 @@ class LocalStorage {
   }
 
   /**
-   * Remove a stored item with a given identifier. 
-   * 
+   * Remove a stored item with a given identifier.
+   *
    * @param {*} key - The key identifier to unset.
    */
   unset (key = '') {
@@ -45,4 +44,5 @@ class LocalStorage {
   }
 }
 
-module.exports = LocalStorage
+export default LocalStorage
+

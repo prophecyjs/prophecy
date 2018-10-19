@@ -3,7 +3,7 @@
  */
 
 var Storage = {
-  LocalStorage: require('./LocalStorage')
+  LocalStorage: require('./LocalStorage').default
 }
 
 module.exports = Storage

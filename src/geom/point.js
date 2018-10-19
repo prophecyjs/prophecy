@@ -1,6 +1,5 @@
 
 class Point {
-
   /**
    * @classdesc
    * Class for Point calculations.
@@ -14,7 +13,6 @@ class Point {
    * @param {number} [y=0] - the y value
    */
   constructor (x = 0, y = 0) {
-
     /**
      * @member {number}
      * @default 0
@@ -64,7 +62,6 @@ class Point {
    * @param {number} [y=0] - position of the point on the y axis
    */
   set (x, y) {
-
     /**
      * @member {number}
      * @default 0
@@ -79,6 +76,4 @@ class Point {
   }
 }
 
-if (typeof module !== 'undefined') {
-  module.exports = Point
-}
+module.exports = Point

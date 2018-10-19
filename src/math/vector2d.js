@@ -308,4 +308,4 @@ class Vector2d {
   }
 }
 
-module.exports = Vector2d
+export default Vector2d
