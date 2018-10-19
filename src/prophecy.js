@@ -1,9 +1,10 @@
-var Prophecy = {
+let Prophecy = {
+  Storage: require('./storage'),
   Game: require('./boot/Game'),
   Geom: require('./geom'),
-  Math: require('./math'),
+  Math: require('./math')
 }
 
-module.exports = Prophecy;
+module.exports = Prophecy
 
-global.Phaser = Prophecy;
+global.Phaser = Prophecy

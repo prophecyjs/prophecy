@@ -1,3 +1,5 @@
+const LocalStorage = require('../storage/LocalStorage')
+
 class Game {
   /**
    * @classdesc
@@ -9,7 +11,9 @@ class Game {
    * @since 1.0.0
    *
    */
-
+  constructor () {
+    this.storage = new LocalStorage()
+  }
 }
 
 module.exports = Game
