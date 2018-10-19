@@ -1,8 +1,7 @@
 // info https://www.intmath.com/vectors/4-adding-vectors-2-dimensions.php
 
 class Vector3d {
-
-    /**
+  /**
    * @classdesc
    * Class for Vector3d math calculations.
    *
@@ -197,7 +196,7 @@ class Vector3d {
    */
   dot (n) {
     if (n instanceof Vector3d) {
-      return (this.x * n.x + this.y * n.y + this.z * n.z);
+      return (this.x * n.x + this.y * n.y + this.z * n.z)
     } else {
       throw new error('Dot: Argument error, argument is not an instance of Vector3d')
     }
@@ -311,6 +310,4 @@ class Vector3d {
   }
 }
 
-if (typeof module !== 'undefined') {
-  module.exports = Vector3d
-}
+module.exports = Vector3d

@@ -40,7 +40,7 @@ class Matrix {
    * @see {@Prophecy.Math.Matrix valueOf}
    * @returns {array}
    */
-  toObject() {
+  toObject () {
     return this.valueOf()
   }
 
@@ -127,7 +127,6 @@ class Matrix {
    * @returns {Prophecy.Math.Matrix}
    */
   add (n) {
-
     if (n instanceof Matrix) {
       if (n.rows !== this.rows || n.cols !== this.cols) {
         throw 'Cannot add matrices together that don\'t share the same size.'
@@ -140,7 +139,6 @@ class Matrix {
           this.data[i][j] += n.data[i][j]
         }
       }
-
     } else {
       for (let i = 0; i < this.rows; i++) {
         this.data[i] = this.data[i].map((v) => v + n)
@@ -183,7 +181,6 @@ class Matrix {
           this.data[i][j] -= n.data[i][j]
         }
       }
-
     } else {
       for (let i = 0; i < this.rows; i++) {
         this.data[i] = this.data[i].map((v) => v - n)
@@ -226,7 +223,6 @@ class Matrix {
           this.data[i][j] *= n.data[i][j]
         }
       }
-
     } else {
       for (let i = 0; i < this.rows; i++) {
         this.data[i] = this.data[i].map((v) => v * n)
@@ -236,6 +232,4 @@ class Matrix {
   }
 }
 
-if (typeof module !== 'undefined') {
-  module.exports = Matrix
-}
+module.exports = Matrix

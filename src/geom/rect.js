@@ -1,6 +1,5 @@
 class Rect {
-
-    /**
+  /**
    * @classdesc
    * Class for Rect calculations.
    *
@@ -15,7 +14,6 @@ class Rect {
    * @param {number} [height=0] - height of the rect
    */
   constructor (x = 0, y = 0, width = 0, height = 0) {
-
     /**
      *
      * @type {number}
@@ -83,7 +81,6 @@ class Rect {
    * @param {number} [height=0] - height of the rect
    */
   set (x, y, width, height) {
-
     this.x = x || 0
     this.y = y
 
@@ -92,6 +89,4 @@ class Rect {
   }
 }
 
-if (typeof module !== 'undefined') {
-  module.exports = Rect
-}
+module.exports = Rect

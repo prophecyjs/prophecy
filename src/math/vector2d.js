@@ -1,8 +1,6 @@
 // info https://www.intmath.com/vectors/4-adding-vectors-2-dimensions.php
 
-
 class Vector2d {
-
   /**
    * @classdesc
    * Class for Vector2d math calculations.
@@ -237,7 +235,7 @@ class Vector2d {
    * @returns {number}
    */
   degrees () {
-    return this.radians() *(180/Math.PI)
+    return this.radians() * (180 / Math.PI)
   }
 
   /**
@@ -308,9 +306,6 @@ class Vector2d {
   getY () {
     return this.y
   }
-
 }
 
-if (typeof module !== 'undefined') {
-  module.exports = Vector2d
-}
+module.exports = Vector2d
