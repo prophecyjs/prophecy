@@ -1,9 +1,11 @@
-const Point = require('./Point')
-const Rect = require('./Rect')
-
 
 /**
  * @namespace Prophecy.Geom
  */
 
-module.exports = { Point, Rect };
+var Geom = {
+  Point: require('./Point'),
+  Rect: require('./Rect')
+}
+
+module.exports = Geom

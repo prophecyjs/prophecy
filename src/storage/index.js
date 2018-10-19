@@ -1,7 +1,9 @@
-const LocalStorage = require('./LocalStorage')
-
 /**
  * @namespace Prophecy.Storage
  */
 
-module.exports = { LocalStorage }
+var Storage = {
+  LocalStorage: require('./LocalStorage')
+}
+
+module.exports = Storage
