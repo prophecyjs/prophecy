@@ -1,42 +1,46 @@
-'use strict';
+'use strict'
 const path = require('path')
-const webpack = require('webpack');
-const exec = require('child_process').exec;
+const webpack = require('webpack')
+const exec = require('child_process').exec
 
 module.exports = {
-    mode: 'development',
+  mode: 'development',
 
-    context: `${__dirname}/src/`,
+  context: `${__dirname}/src/`,
 
-    entry: {
-      prophecy: './prophecy.js'
-    },
+  entry: {
+    prophecy: './prophecy.js'
+  },
 
-    output: {
-        path: `${__dirname}/build/`,
-        filename: '[name].js',
-        library: 'Prophecy',
-        libraryTarget: 'umd',
-        sourceMapFilename: '[file].map',
-        devtoolModuleFilenameTemplate: 'webpack:///[resource-path]', // string
-        devtoolFallbackModuleFilenameTemplate: 'webpack:///[resource-path]?[hash]', // string
-        umdNamedDefine: true
-    },
+  output: {
+    path: `${__dirname}/build/`,
+    filename: '[name].js',
+    library: 'Prophecy',
+    libraryTarget: 'umd',
+    sourceMapFilename: '[file].map',
+    devtoolModuleFilenameTemplate: 'webpack:///[resource-path]', // string
+    devtoolFallbackModuleFilenameTemplate: 'webpack:///[resource-path]?[hash]', // string
+    umdNamedDefine: true
+  },
 
-    performance: { hints: false },
+  performance: {hints: false},
 
-    plugins: [
-        new webpack.DefinePlugin({
-            // "typeof CANVAS_RENDERER": JSON.stringify(true),
-            // "typeof WEBGL_RENDERER": JSON.stringify(true),
-            // "typeof EXPERIMENTAL": JSON.stringify(false),
-        }),
-        {
-            apply: (compiler) => {
-                
-            }
-        }
-    ],
+  plugins: [
+    new webpack.DefinePlugin({
+      // "typeof CANVAS_RENDERER": JSON.stringify(true),
+      // "typeof WEBGL_RENDERER": JSON.stringify(true),
+      // "typeof EXPERIMENTAL": JSON.stringify(false),
+    }),
+    {
+      apply: (compiler) => {
 
-    devtool: 'source-map'
-};
+      }
+    }
+  ],
+  resolve: {
+    alias: {
+      'pixi': path.resolve(__dirname, './node_modules/pixi.js'),
+    }
+  },
+  devtool: 'source-map'
+}
