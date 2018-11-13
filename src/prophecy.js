@@ -47,7 +47,8 @@ let Prophecy = {
   Storage: require('./storage'),
   Game: require('./boot/Game'),
   Geom: require('./geom'),
-  Math: require('./math')
+  Math: require('./math'),
+  Scene: require('./scene')
 }
 
 Prophecy = extend(Prophecy, CONST)
